@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\NeuroSim.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{5BC747DC-8A54-41C7-B6C4-84CC76357003}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\NeuroSim.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\NeuroSimEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\NeuroSim.VC.db" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{4F236207-EE1F-414B-89CA-57976CECDCA1}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\NeuroSim">
+      <UniqueIdentifier>{FDE0C7D1-0973-436C-B7DD-FDBAD8F63879}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\NeuroSim\default.cpp">
+      <Filter>Source\NeuroSim</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NeuroSim\default.h">
+      <Filter>Source\NeuroSim</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\NeuroSim\NeuroSim.Build.cs">
+      <Filter>Source\NeuroSim</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\NeuroSim\NeuroSim.cpp">
+      <Filter>Source\NeuroSim</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NeuroSim\NeuroSim.h">
+      <Filter>Source\NeuroSim</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

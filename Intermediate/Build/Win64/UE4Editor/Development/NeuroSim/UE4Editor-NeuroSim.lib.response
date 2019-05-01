@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-NeuroSim.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Epic Games\Neural\NeuroSim\Intermediate\Build\Win64\NeuroSimEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"D:\Epic Games\Neural\NeuroSim\Intermediate\Build\Win64\UE4Editor\Development\NeuroSim\default.cpp.obj"
+"D:\Epic Games\Neural\NeuroSim\Intermediate\Build\Win64\UE4Editor\Development\NeuroSim\NeuroSim.cpp.obj"
+"D:\Epic Games\Neural\NeuroSim\Intermediate\Build\Win64\UE4Editor\Development\NeuroSim\Default.rc2.res"
+/OUT:"D:\Epic Games\Neural\NeuroSim\Intermediate\Build\Win64\UE4Editor\Development\NeuroSim\UE4Editor-NeuroSim.lib"
+/INCLUDE:IMPLEMENT_MODULE_NeuroSim
