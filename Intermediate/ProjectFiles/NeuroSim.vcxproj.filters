@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <None Include="..\..\NeuroSim.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{5BC747DC-8A54-41C7-B6C4-84CC76357003}</UniqueIdentifier>
+      <UniqueIdentifier>{79B45EAC-8B4E-4FE6-9AF7-17E1BF13F10C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\NeuroSim.Target.cs">
       <Filter>Source</Filter>
@@ -11,9 +11,12 @@
     <None Include="..\..\Source\NeuroSimEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
+    <None Include="..\..\desktop.ini" />
     <None Include="..\..\NeuroSim.VC.db" />
     <Filter Include="Config">
-      <UniqueIdentifier>{4F236207-EE1F-414B-89CA-57976CECDCA1}</UniqueIdentifier>
+      <UniqueIdentifier>{BB6539B9-A721-412D-8F58-42C8019245DC}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,8 +34,14 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\NeuroSim">
-      <UniqueIdentifier>{FDE0C7D1-0973-436C-B7DD-FDBAD8F63879}</UniqueIdentifier>
+      <UniqueIdentifier>{0E102499-55D8-433B-AA1C-1E4691822179}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\NeuroSim\AIpawn_character.cpp">
+      <Filter>Source\NeuroSim</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NeuroSim\AIpawn_character.h">
+      <Filter>Source\NeuroSim</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\NeuroSim\default.cpp">
       <Filter>Source\NeuroSim</Filter>
     </ClCompile>
