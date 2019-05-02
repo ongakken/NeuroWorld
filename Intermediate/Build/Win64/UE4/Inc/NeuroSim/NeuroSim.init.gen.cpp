@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeNeuroSim_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xA488A7EE,
+				0xED13FA66,
 				0x048CDB3B,
 				METADATA_PARAMS(nullptr, 0)
 			};
