@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_character() {}
 	NEUROSIM_API UClass* Z_Construct_UClass_AAIpawn_character();
 	ENGINE_API UClass* Z_Construct_UClass_APawn();
 	UPackage* Z_Construct_UPackage__Script_NeuroSim();
+	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
 	void AAIpawn_character::StaticRegisterNativesAAIpawn_character()
 	{
@@ -31,6 +32,11 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_character() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Mesh_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Mesh;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -45,6 +51,18 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_character() {}
 		{ "ModuleRelativePath", "AIpawn_character.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAIpawn_character_Statics::NewProp_Mesh_MetaData[] = {
+		{ "Category", "Components" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "AIpawn_character.h" },
+		{ "ToolTip", "static mesh component pointer\nthis sets values for different UE4-native properties (description, category, etc.)" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAIpawn_character_Statics::NewProp_Mesh = { "Mesh", nullptr, (EPropertyFlags)0x0020080000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAIpawn_character, Mesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AAIpawn_character_Statics::NewProp_Mesh_MetaData, ARRAY_COUNT(Z_Construct_UClass_AAIpawn_character_Statics::NewProp_Mesh_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AAIpawn_character_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAIpawn_character_Statics::NewProp_Mesh,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AAIpawn_character_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AAIpawn_character>::IsAbstract,
 	};
@@ -54,11 +72,11 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_character() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_AAIpawn_character_Statics::PropPointers,
 		nullptr,
 		ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		ARRAY_COUNT(Z_Construct_UClass_AAIpawn_character_Statics::PropPointers),
 		0,
 		0x009000A0u,
 		METADATA_PARAMS(Z_Construct_UClass_AAIpawn_character_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_AAIpawn_character_Statics::Class_MetaDataParams))
@@ -72,7 +90,7 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_character() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAIpawn_character, 3305136656);
+	IMPLEMENT_CLASS(AAIpawn_character, 91334617);
 	template<> NEUROSIM_API UClass* StaticClass<AAIpawn_character>()
 	{
 		return AAIpawn_character::StaticClass();

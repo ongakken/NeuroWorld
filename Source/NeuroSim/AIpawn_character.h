@@ -4,10 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
-#include "AIpawn_character.generated.h"
-#include <iostream>
-#include <string>
 #include "UObject/ObjectMacros.h"
+#include <string>
+#include <iostream>
+#include "AIpawn_character.generated.h"
+#include <thread>
 
 UCLASS()
 class NEUROSIM_API AAIpawn_character : public APawn
@@ -22,15 +23,24 @@ public:
 protected:
 	// Called when the game starts or when spawned 
 	virtual void BeginPlay() override;
- 
-	void emotionCat(int emotionQuotient);
 
 	FString dominantEmotion; //var that holds the most intensive emotion in a character instance
 	int emotionQuotient; //emotion categorization var (the value of this var will range from <-1; 1>, where minus are the negative emotions and plus are the positive ones; zero is a neutral)
 	// 0 = neutral; happiness = <1; 5>; fear =
+	float food;
+	float hydration;
+	float energy;
+	void decrementNeeds();
+	std::thread;
+	FVector CurrentActorLocation;
 
 
 
+	//static mesh component pointer
+	UPROPERTY(EditAnywhere, Category = "Components") //this sets values for different UE4-native properties (description, category, etc.)
+	UStaticMeshComponent* Mesh;
+
+	
 
 	//std::string dominantEmotion;
 	//FString dominantEmotion[6] = { "fear", "shock", "happiness", "love", "sadness", "neutral" };
