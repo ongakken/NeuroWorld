@@ -7,8 +7,8 @@
 #include "UObject/ObjectMacros.h"
 #include <string>
 #include <iostream>
-#include "AIpawn_character.generated.h"
 #include <thread>
+#include "AIpawn_character.generated.h"
 
 UCLASS()
 class NEUROSIM_API AAIpawn_character : public APawn
@@ -19,6 +19,8 @@ class NEUROSIM_API AAIpawn_character : public APawn
 public:
 	// Sets default values for this pawn's properties
 	AAIpawn_character();
+	UFUNCTION(BlueprintCallable, Category = "AIpawn_character")
+	void decrementNeeds();
 
 protected:
 	// Called when the game starts or when spawned 
@@ -30,8 +32,8 @@ protected:
 	float food;
 	float hydration;
 	float energy;
-	void decrementNeeds();
-	std::thread;
+	int threadID;
+	bool bdecrementNeeds;
 	FVector CurrentActorLocation;
 
 

@@ -17,10 +17,39 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_character() {}
 	NEUROSIM_API UClass* Z_Construct_UClass_AAIpawn_character();
 	ENGINE_API UClass* Z_Construct_UClass_APawn();
 	UPackage* Z_Construct_UPackage__Script_NeuroSim();
+	NEUROSIM_API UFunction* Z_Construct_UFunction_AAIpawn_character_decrementNeeds();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
 	void AAIpawn_character::StaticRegisterNativesAAIpawn_character()
 	{
+		UClass* Class = AAIpawn_character::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "decrementNeeds", &AAIpawn_character::execdecrementNeeds },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AAIpawn_character_decrementNeeds_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AAIpawn_character_decrementNeeds_Statics::Function_MetaDataParams[] = {
+		{ "Category", "AIpawn_character" },
+		{ "ModuleRelativePath", "AIpawn_character.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AAIpawn_character_decrementNeeds_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AAIpawn_character, nullptr, "decrementNeeds", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AAIpawn_character_decrementNeeds_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AAIpawn_character_decrementNeeds_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AAIpawn_character_decrementNeeds()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAIpawn_character_decrementNeeds_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_AAIpawn_character_NoRegister()
 	{
@@ -29,6 +58,7 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_character() {}
 	struct Z_Construct_UClass_AAIpawn_character_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -43,6 +73,9 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_character() {}
 	UObject* (*const Z_Construct_UClass_AAIpawn_character_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_APawn,
 		(UObject* (*)())Z_Construct_UPackage__Script_NeuroSim,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_AAIpawn_character_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AAIpawn_character_decrementNeeds, "decrementNeeds" }, // 1323593007
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAIpawn_character_Statics::Class_MetaDataParams[] = {
@@ -71,11 +104,11 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_character() {}
 		nullptr,
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_AAIpawn_character_Statics::PropPointers,
 		nullptr,
 		ARRAY_COUNT(DependentSingletons),
-		0,
+		ARRAY_COUNT(FuncInfo),
 		ARRAY_COUNT(Z_Construct_UClass_AAIpawn_character_Statics::PropPointers),
 		0,
 		0x009000A0u,
@@ -90,7 +123,7 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_character() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAIpawn_character, 91334617);
+	IMPLEMENT_CLASS(AAIpawn_character, 2734520724);
 	template<> NEUROSIM_API UClass* StaticClass<AAIpawn_character>()
 	{
 		return AAIpawn_character::StaticClass();
