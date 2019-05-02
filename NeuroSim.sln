@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.22310.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{2F52487F-006F-4ADC-AE1D-ED36325F2027}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{80859094-2C9F-4662-A93C-E4886C16F032}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Games", "Games", "{DCF759F7-65C3-466F-AF61-55EAD77F5F5D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Games", "Games", "{064029F5-4F43-431F-AC14-C4E884661011}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NeuroSim", "Intermediate\ProjectFiles\NeuroSim.vcxproj", "{577A8BE4-C3BF-4697-97BC-818D06354A11}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UE4", "Intermediate\ProjectFiles\UE4.vcxproj", "{DFDCB237-ACB9-49FB-83BD-9622BE334D66}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Visualizers", "Visualizers", "{95FCB63A-652A-4B01-B5B8-86937E5D3A79}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Visualizers", "Visualizers", "{250959B7-E020-4031-AAB3-EE6DD13B3437}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\UE_4.22\Engine\Extras\VisualStudioDebugging\UE4.natvis = ..\..\UE_4.22\Engine\Extras\VisualStudioDebugging\UE4.natvis
 	EndProjectSection
@@ -101,7 +101,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{DFDCB237-ACB9-49FB-83BD-9622BE334D66} = {2F52487F-006F-4ADC-AE1D-ED36325F2027}
-		{577A8BE4-C3BF-4697-97BC-818D06354A11} = {DCF759F7-65C3-466F-AF61-55EAD77F5F5D}
+		{DFDCB237-ACB9-49FB-83BD-9622BE334D66} = {80859094-2C9F-4662-A93C-E4886C16F032}
+		{577A8BE4-C3BF-4697-97BC-818D06354A11} = {064029F5-4F43-431F-AC14-C4E884661011}
 	EndGlobalSection
 EndGlobal
