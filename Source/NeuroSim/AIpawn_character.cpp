@@ -1,13 +1,11 @@
 #include "AIpawn_character.h"
-#include <chrono>
-#include <thread>
 #include <iostream>
 #include <stdio.h>
 #include <conio.h>
 #include <Engine.h>
 #include "Classes/Components/StaticMeshComponent.h"
-#include <TimerManager.h>
-
+#include "Classes/Components/BoxComponent.h"
+#include "Classes/Camera/CameraComponent.h"
 
 using namespace std;
 
@@ -16,32 +14,47 @@ using namespace std;
 AAIpawn_character::AAIpawn_character()
 {
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = false;
+	PrimaryActorTick.bCanEverTick = true;
 
-	Mesh = CreateDefaultSubobject<UStaticMeshComponent>("Mesh"); //declaring a new component (subobject) for the current actor
+	Mesh = CreateDefaultSubobject<UStaticMeshComponent>("Mesh"); //defining a new component (subobject) for the current actor
+	Camera = CreateDefaultSubobject<UCameraComponent>("Camera"); //defining a primary camera that will provide an exclusive look on this actor
+	//Collider = CreateDefaultSubobject<UBoxComponent>(TEXT("Collider")); //defining a box component which will be used as a box collider
+	//Collider->OnComponentBeginOverlap.AddDynamic(this, &refillNeeds()::OnColliderBeginOverlap); //sending an instruction to Collider saying that we want to run refillNeeds() when OnColliderBeginOverlap func runs
+	
 }
 
 void AAIpawn_character::decrementNeeds()
 {
-		food = food - 0.1f;
-		energy = energy - 0.2f;
-		hydration = hydration - 0.5f;
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("zmenil som hodnotu")));
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, "%f", food);
-		//std::this_thread::sleep_for(std::chrono::milliseconds{ 60000 });
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("preslo 60 sekund")));
+		foodLevel = foodLevel - 0.1f;
+		energyLevel = energyLevel - 0.2f;
+		hydrationLevel = hydrationLevel - 0.5f;
+}
+
+void AAIpawn_character::refillNeeds(FString needsToManipulate, float amount) {
+	//refill needs based on the string input (which need to refill) and by how much
+
+		if (needsToManipulate == "food") {
+			if (foodLevel <=100) {
+				foodLevel += amount;
+			}
+		}
+		else if (needsToManipulate == "energy") {
+			if (energyLevel <= 100) {
+				energyLevel += amount;
+			}
+		}
+		else if (needsToManipulate == "hydration") {
+			if (hydrationLevel <= 100) {
+				hydrationLevel += amount;
+			}
+		}
 }
 
 // Called when the game starts or when spawned
-void AAIpawn_character::BeginPlay()
-{
+void AAIpawn_character::BeginPlay() {
 	Super::BeginPlay();
-	//std::this_thread::sleep_for(std::chrono::milliseconds{60000}); //this command stops the whole fucking runtime for amount of x!
-	decrementNeeds();
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("mainThread")));
-
 	Mesh->SetWorldScale3D(FMath::VRand());
-	//GetWorldTimerManager().SetTimer(MemberTimerHandle, this, &AAIpawn_character::decrementNeeds, 1.0f, true, 2.0f);
 
 }
 
