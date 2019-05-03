@@ -219,6 +219,21 @@
 /I ..\Intermediate\Build\Win64\UE4\Inc\AnimationCore
 /I Runtime\AnimationCore\Public
 /I Runtime\AnimationCore
+/I ..\Intermediate\Build\Win64\UE4\Inc\AIModule
+/I Runtime\NavigationSystem\Public
+/I Runtime\AIModule\Public
+/I Runtime\AIModule\Classes
+/I Runtime\AIModule
+/I ..\Intermediate\Build\Win64\UE4\Inc\GameplayTasks
+/I Runtime\GameplayTasks\Classes
+/I Runtime\GameplayTasks\Public
+/I Runtime\GameplayTasks
+/I ..\Intermediate\Build\Win64\UE4\Inc\NavigationSystem
+/I Runtime\NavigationSystem
+/I Runtime\NavigationSystem\Public\NavAreas
+/I Runtime\NavigationSystem\Public\NavFilters
+/I Runtime\NavigationSystem\Public\NavGraph
+/I Runtime\NavigationSystem\Public\NavMesh
 /I "D:\Epic Games\Neural\NeuroSim\Intermediate\Build\Win64\UE4\Inc\NeuroSim"
 /I "D:\Epic Games\Neural\NeuroSim\Source"
 /I "D:\Epic Games\Neural\NeuroSim\Source\NeuroSim"

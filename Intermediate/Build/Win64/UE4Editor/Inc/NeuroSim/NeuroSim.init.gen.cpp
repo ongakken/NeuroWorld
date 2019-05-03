@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeNeuroSim_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xED13FA66,
-				0x048CDB3B,
+				0xE1D08B2E,
+				0xBBCB4758,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

@@ -45,15 +45,4 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.1
 C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\share.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.16.27023\INCLUDE\xstring_insert.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.16.27023\INCLUDE\iostream
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.16.27023\INCLUDE\thread
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.16.27023\INCLUDE\functional
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.16.27023\INCLUDE\tuple
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.16.27023\INCLUDE\chrono
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.16.27023\INCLUDE\ratio
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\time.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.16.27023\INCLUDE\thr/xtimec.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.16.27023\INCLUDE\thr/xthrcommon.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.16.27023\INCLUDE\thr/xthread
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.16.27023\INCLUDE\thr/xtime
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.16.27023\INCLUDE\thr/xthreads.h
 d:\epic games\neural\neurosim\intermediate\build\win64\ue4\inc\neurosim\AIpawn_character.generated.h

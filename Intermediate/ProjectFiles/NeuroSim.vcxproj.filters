@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\NeuroSim.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{10DEC145-5452-40F7-9B6C-F5BD729DCD3A}</UniqueIdentifier>
+      <UniqueIdentifier>{FEEDBDF4-DC78-4F2A-892B-9890C3380999}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\NeuroSim.Target.cs">
       <Filter>Source</Filter>
@@ -16,7 +16,7 @@
     <None Include="..\..\desktop.ini" />
     <None Include="..\..\NeuroSim.VC.db" />
     <Filter Include="Config">
-      <UniqueIdentifier>{8E8F2FB0-2B09-42F4-A84A-0460B318C200}</UniqueIdentifier>
+      <UniqueIdentifier>{3458C928-3776-4A0F-A6FD-9E4ADF9B95F2}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -34,12 +34,18 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\NeuroSim">
-      <UniqueIdentifier>{1C89E6E9-1072-477B-A84A-D2BBFF2CB0A2}</UniqueIdentifier>
+      <UniqueIdentifier>{6628C6D0-720D-4822-ABF4-1224FE6B26D2}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\NeuroSim\AIpawn_character.cpp">
       <Filter>Source\NeuroSim</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\NeuroSim\AIpawn_character.h">
+      <Filter>Source\NeuroSim</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NeuroSim\AIpawn_controller.cpp">
+      <Filter>Source\NeuroSim</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NeuroSim\AIpawn_controller.h">
       <Filter>Source\NeuroSim</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\NeuroSim\default.cpp">

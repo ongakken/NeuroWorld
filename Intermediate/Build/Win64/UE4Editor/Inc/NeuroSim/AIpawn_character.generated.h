@@ -13,7 +13,17 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define NEUROSIM_AIpawn_character_generated_h
 
-#define NeuroSim_Source_NeuroSim_AIpawn_character_h_16_RPC_WRAPPERS \
+#define NeuroSim_Source_NeuroSim_AIpawn_character_h_15_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execrefillNeeds) \
+	{ \
+		P_GET_PROPERTY(UStrProperty,Z_Param_needsToManipulate); \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_amount); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->refillNeeds(Z_Param_needsToManipulate,Z_Param_amount); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execdecrementNeeds) \
 	{ \
@@ -24,7 +34,17 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	}
 
 
-#define NeuroSim_Source_NeuroSim_AIpawn_character_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+#define NeuroSim_Source_NeuroSim_AIpawn_character_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execrefillNeeds) \
+	{ \
+		P_GET_PROPERTY(UStrProperty,Z_Param_needsToManipulate); \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_amount); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->refillNeeds(Z_Param_needsToManipulate,Z_Param_amount); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execdecrementNeeds) \
 	{ \
@@ -35,7 +55,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	}
 
 
-#define NeuroSim_Source_NeuroSim_AIpawn_character_h_16_INCLASS_NO_PURE_DECLS \
+#define NeuroSim_Source_NeuroSim_AIpawn_character_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAAIpawn_character(); \
 	friend struct Z_Construct_UClass_AAIpawn_character_Statics; \
@@ -44,7 +64,7 @@ public: \
 	DECLARE_SERIALIZER(AAIpawn_character)
 
 
-#define NeuroSim_Source_NeuroSim_AIpawn_character_h_16_INCLASS \
+#define NeuroSim_Source_NeuroSim_AIpawn_character_h_15_INCLASS \
 private: \
 	static void StaticRegisterNativesAAIpawn_character(); \
 	friend struct Z_Construct_UClass_AAIpawn_character_Statics; \
@@ -53,7 +73,7 @@ public: \
 	DECLARE_SERIALIZER(AAIpawn_character)
 
 
-#define NeuroSim_Source_NeuroSim_AIpawn_character_h_16_STANDARD_CONSTRUCTORS \
+#define NeuroSim_Source_NeuroSim_AIpawn_character_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AAIpawn_character(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AAIpawn_character) \
@@ -66,7 +86,7 @@ private: \
 public:
 
 
-#define NeuroSim_Source_NeuroSim_AIpawn_character_h_16_ENHANCED_CONSTRUCTORS \
+#define NeuroSim_Source_NeuroSim_AIpawn_character_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AAIpawn_character(AAIpawn_character&&); \
@@ -77,29 +97,29 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AAIpawn_character); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AAIpawn_character)
 
 
-#define NeuroSim_Source_NeuroSim_AIpawn_character_h_16_PRIVATE_PROPERTY_OFFSET \
+#define NeuroSim_Source_NeuroSim_AIpawn_character_h_15_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Mesh() { return STRUCT_OFFSET(AAIpawn_character, Mesh); }
 
 
-#define NeuroSim_Source_NeuroSim_AIpawn_character_h_13_PROLOG
-#define NeuroSim_Source_NeuroSim_AIpawn_character_h_16_GENERATED_BODY_LEGACY \
+#define NeuroSim_Source_NeuroSim_AIpawn_character_h_12_PROLOG
+#define NeuroSim_Source_NeuroSim_AIpawn_character_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	NeuroSim_Source_NeuroSim_AIpawn_character_h_16_PRIVATE_PROPERTY_OFFSET \
-	NeuroSim_Source_NeuroSim_AIpawn_character_h_16_RPC_WRAPPERS \
-	NeuroSim_Source_NeuroSim_AIpawn_character_h_16_INCLASS \
-	NeuroSim_Source_NeuroSim_AIpawn_character_h_16_STANDARD_CONSTRUCTORS \
+	NeuroSim_Source_NeuroSim_AIpawn_character_h_15_PRIVATE_PROPERTY_OFFSET \
+	NeuroSim_Source_NeuroSim_AIpawn_character_h_15_RPC_WRAPPERS \
+	NeuroSim_Source_NeuroSim_AIpawn_character_h_15_INCLASS \
+	NeuroSim_Source_NeuroSim_AIpawn_character_h_15_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define NeuroSim_Source_NeuroSim_AIpawn_character_h_16_GENERATED_BODY \
+#define NeuroSim_Source_NeuroSim_AIpawn_character_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	NeuroSim_Source_NeuroSim_AIpawn_character_h_16_PRIVATE_PROPERTY_OFFSET \
-	NeuroSim_Source_NeuroSim_AIpawn_character_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	NeuroSim_Source_NeuroSim_AIpawn_character_h_16_INCLASS_NO_PURE_DECLS \
-	NeuroSim_Source_NeuroSim_AIpawn_character_h_16_ENHANCED_CONSTRUCTORS \
+	NeuroSim_Source_NeuroSim_AIpawn_character_h_15_PRIVATE_PROPERTY_OFFSET \
+	NeuroSim_Source_NeuroSim_AIpawn_character_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	NeuroSim_Source_NeuroSim_AIpawn_character_h_15_INCLASS_NO_PURE_DECLS \
+	NeuroSim_Source_NeuroSim_AIpawn_character_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

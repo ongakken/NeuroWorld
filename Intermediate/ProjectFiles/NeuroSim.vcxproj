@@ -543,6 +543,8 @@
     <None Include="..\..\Config\DefaultInput.ini"/>
     <ClCompile Include="..\..\Source\NeuroSim\AIpawn_character.cpp"/>
     <ClInclude Include="..\..\Source\NeuroSim\AIpawn_character.h"/>
+    <ClCompile Include="..\..\Source\NeuroSim\AIpawn_controller.cpp"/>
+    <ClInclude Include="..\..\Source\NeuroSim\AIpawn_controller.h"/>
     <ClCompile Include="..\..\Source\NeuroSim\default.cpp"/>
     <ClInclude Include="..\..\Source\NeuroSim\default.h"/>
     <None Include="..\..\Source\NeuroSim\NeuroSim.Build.cs"/>
