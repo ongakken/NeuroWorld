@@ -157,6 +157,7 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_character() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAIpawn_character_Statics::NewProp_emotionQuotient_MetaData[] = {
 		{ "Category", "Emotions" },
 		{ "ModuleRelativePath", "AIpawn_character.h" },
+		{ "ToolTip", "var that holds the most intensive emotion in a character instance" },
 	};
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AAIpawn_character_Statics::NewProp_emotionQuotient = { "emotionQuotient", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAIpawn_character, emotionQuotient), METADATA_PARAMS(Z_Construct_UClass_AAIpawn_character_Statics::NewProp_emotionQuotient_MetaData, ARRAY_COUNT(Z_Construct_UClass_AAIpawn_character_Statics::NewProp_emotionQuotient_MetaData)) };
@@ -224,7 +225,7 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_character() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAIpawn_character, 1411742240);
+	IMPLEMENT_CLASS(AAIpawn_character, 2624984873);
 	template<> NEUROSIM_API UClass* StaticClass<AAIpawn_character>()
 	{
 		return AAIpawn_character::StaticClass();
