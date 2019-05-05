@@ -1,5 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -25,6 +23,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Needs")
 	float energyLevel = 100;
 
+	UFUNCTION(BlueprintCallable, Category = "Core AI logic")
+	void locationDecision(FString colliderInstance); //this func will decide whether to return to a certain place and how probable that is based on the emotion(s) experienced there
 	UFUNCTION(BlueprintCallable, Category = "'Needs' manipulation")
 	void decrementNeeds();
 	UFUNCTION(BlueprintCallable, Category = "'Needs' manipulation")
@@ -44,7 +44,7 @@ protected:
 	//UPROPERTY(EditAnywhere, Category = "Components")
 	//UCameraComponent* Camera;
 
-	UPROPERTY(EditAnywhere, Category = "Components")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 	UStaticMeshComponent* body;
 
 	//FString dominantEmotion[6] = { "fear", "shock", "happiness", "love", "sadness", "neutral" };

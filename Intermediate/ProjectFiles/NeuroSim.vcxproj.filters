@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\NeuroSim.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{463582AF-09BA-45B6-8828-64A1504F2B99}</UniqueIdentifier>
+      <UniqueIdentifier>{D6D3AD27-F5BB-4BB7-BD71-C767EC60027A}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\NeuroSim.Target.cs">
       <Filter>Source</Filter>
@@ -16,7 +16,7 @@
     <None Include="..\..\desktop.ini" />
     <None Include="..\..\NeuroSim.VC.db" />
     <Filter Include="Config">
-      <UniqueIdentifier>{D4873656-66E5-455A-BC32-809422C1882D}</UniqueIdentifier>
+      <UniqueIdentifier>{828A9A7C-C2F1-4EA2-A99C-2A2DEEC24485}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -34,12 +34,18 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\NeuroSim">
-      <UniqueIdentifier>{D0D5664A-C16F-48BF-A7F3-95D1A8D8B583}</UniqueIdentifier>
+      <UniqueIdentifier>{0C10590F-C426-456B-8EAD-3652623FD734}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\NeuroSim\AIpawn_character.cpp">
       <Filter>Source\NeuroSim</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\NeuroSim\AIpawn_character.h">
+      <Filter>Source\NeuroSim</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NeuroSim\AIpawn_characterDefault.cpp">
+      <Filter>Source\NeuroSim</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NeuroSim\AIpawn_characterDefault.h">
       <Filter>Source\NeuroSim</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\NeuroSim\AIpawn_controller.cpp">
@@ -63,15 +69,5 @@
     <ClInclude Include="..\..\Source\NeuroSim\NeuroSim.h">
       <Filter>Source\NeuroSim</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\NeuroSim\AIpawn_characterDefault.h">
-      <Filter>Source\NeuroSim</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Source\NeuroSim\AIpawn_characterDefault.cpp">
-      <Filter>Source\NeuroSim</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

@@ -19,7 +19,7 @@ AAIpawn_characterDefault::AAIpawn_characterDefault()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	body = CreateDefaultSubobject<UStaticMeshComponent>("Mesh"); //defining a new component (subobject) for the current actor
+	body = CreateDefaultSubobject<UStaticMeshComponent>("mesh"); //defining a new component (subobject) for the current actor
 	/* Camera = CreateDefaultSubobject<UCameraComponent>("Camera"); //defining a primary camera that will provide an exclusive look on this actor
 	Camera->SetRelativeLocation(FVector(-500.f, 0.f, 0.f));
 	Camera->SetupAttachment(Mesh); */
@@ -54,6 +54,31 @@ void AAIpawn_characterDefault::refillNeeds(FString needsToManipulate, float amou
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("I'm hydrated")));
 		}
 	}
+}
+
+void AAIpawn_characterDefault::locationDecision (FString colliderInstance)
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, FString::Printf(TEXT("locationDecision run"))); 
+	if (dominantEmotion == "fear") {
+		emotionQuotient = '-1';
+	}
+	else if (dominantEmotion == "shock") {
+		emotionQuotient = '-1';
+	}
+	else if (dominantEmotion == "love") {
+		emotionQuotient = '1';
+	}
+	else if (dominantEmotion == "happiness") {
+		emotionQuotient = '1';
+	}
+	else if (dominantEmotion == "sadness") {
+		emotionQuotient = '-1';
+	}
+	else if (dominantEmotion == "neutral") {
+		emotionQuotient = '0';
+	}
+	//calculate the probability of returning (or not returning) to the location being decided
+	//insert the probability value into the behavior tree service used to navigate through the navmesh(navmeshes)
 }
 
 void AAIpawn_characterDefault::decrementNeeds()
