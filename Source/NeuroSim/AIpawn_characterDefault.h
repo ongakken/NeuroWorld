@@ -22,7 +22,14 @@ public:
 	float hydrationLevel = 100;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Needs")
 	float energyLevel = 100;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI Sensing")
+	int sense; //sense = 1 => sight; sense = 2 => hearing; sense = 0 => unknown, need to recheck
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor instances")
+	FString detectedActorInstance; //declaring a string var which will hold the Actor Instance detected by the blueprint and passed into the AIsenseDecision func using this var
 
+
+	UFUNCTION(BlueprintCallable, Category = "Core AI logic")
+	void AIsenseDecision(int sense, FString detectedActorInstance);
 	UFUNCTION(BlueprintCallable, Category = "Core AI logic")
 	void locationDecision(FString colliderInstance); //this func will decide whether to return to a certain place and how probable that is based on the emotion(s) experienced there
 	UFUNCTION(BlueprintCallable, Category = "'Needs' manipulation")
@@ -33,7 +40,6 @@ public:
 	FString dominantEmotion; //var that holds the most intensive emotion in a character instance
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Emotions")
 	int emotionQuotient; //emotion categorization var (the value of this var will range from <-1; 1>, where minus are the negative emotions and plus are the positive ones; zero is a neutral)
-	// 0 = neutral; happiness = <1; 5>;
 
 protected:
 	// Called when the game starts or when spawned
