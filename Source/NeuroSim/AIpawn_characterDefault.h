@@ -16,12 +16,20 @@ class NEUROSIM_API AAIpawn_characterDefault : public ACharacter
 public:
 	// Sets default values for this character's properties
 	AAIpawn_characterDefault();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Core AI logic")
+	string positiveLocations[];
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Core AI logic")
+	string negativeLocations[];
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Needs")
 	float foodLevel = 100;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Needs")
 	float hydrationLevel = 100;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Needs")
 	float energyLevel = 100;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Aux")
+	int auxInt_pos = 0;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Aux")
+	int auxInt_neg = 0;
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI Sensing")
 	//int sense; //sense = 1 => sight; sense = 2 => hearing; sense = 0 => unknown, need to recheck
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor instances")
@@ -29,6 +37,8 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 	UStaticMeshComponent* body;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+	UStaticMeshComponent* testMeshComponent;
 
 
 	UFUNCTION(BlueprintCallable, Category = "Core AI logic")
