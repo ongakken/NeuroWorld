@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_characterDefault() {}
 	NEUROSIM_API UClass* Z_Construct_UClass_AAIpawn_characterDefault();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	UPackage* Z_Construct_UPackage__Script_NeuroSim();
+	NEUROSIM_API UFunction* Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision();
 	NEUROSIM_API UFunction* Z_Construct_UFunction_AAIpawn_characterDefault_decrementNeeds();
 	NEUROSIM_API UFunction* Z_Construct_UFunction_AAIpawn_characterDefault_locationDecision();
 	NEUROSIM_API UFunction* Z_Construct_UFunction_AAIpawn_characterDefault_refillNeeds();
@@ -26,11 +27,49 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_characterDefault() {}
 	{
 		UClass* Class = AAIpawn_characterDefault::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "AIsenseDecision", &AAIpawn_characterDefault::execAIsenseDecision },
 			{ "decrementNeeds", &AAIpawn_characterDefault::execdecrementNeeds },
 			{ "locationDecision", &AAIpawn_characterDefault::execlocationDecision },
 			{ "refillNeeds", &AAIpawn_characterDefault::execrefillNeeds },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics
+	{
+		struct AIpawn_characterDefault_eventAIsenseDecision_Parms
+		{
+			int32 sense;
+			FString detectedActorInstance;
+		};
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_detectedActorInstance;
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_sense;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::NewProp_detectedActorInstance = { "detectedActorInstance", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AIpawn_characterDefault_eventAIsenseDecision_Parms, detectedActorInstance), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::NewProp_sense = { "sense", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AIpawn_characterDefault_eventAIsenseDecision_Parms, sense), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::NewProp_detectedActorInstance,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::NewProp_sense,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Core AI logic" },
+		{ "ModuleRelativePath", "AIpawn_characterDefault.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AAIpawn_characterDefault, nullptr, "AIsenseDecision", sizeof(AIpawn_characterDefault_eventAIsenseDecision_Parms), Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_AAIpawn_characterDefault_decrementNeeds_Statics
 	{
@@ -138,10 +177,6 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_characterDefault() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_body_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_body;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_emotionQuotient_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_emotionQuotient;
@@ -149,6 +184,10 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_characterDefault() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_dominantEmotion_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStrPropertyParams NewProp_dominantEmotion;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_body_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_body;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_energyLevel_MetaData[];
 #endif
@@ -170,6 +209,7 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_characterDefault() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_NeuroSim,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AAIpawn_characterDefault_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision, "AIsenseDecision" }, // 783744750
 		{ &Z_Construct_UFunction_AAIpawn_characterDefault_decrementNeeds, "decrementNeeds" }, // 1252941774
 		{ &Z_Construct_UFunction_AAIpawn_characterDefault_locationDecision, "locationDecision" }, // 3193811736
 		{ &Z_Construct_UFunction_AAIpawn_characterDefault_refillNeeds, "refillNeeds" }, // 224846587
@@ -181,15 +221,6 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_characterDefault() {}
 		{ "ModuleRelativePath", "AIpawn_characterDefault.h" },
 	};
 #endif
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_body_MetaData[] = {
-		{ "Category", "Components" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "AIpawn_characterDefault.h" },
-		{ "ToolTip", "UPROPERTY(EditAnywhere, Category = \"Components\")\nUCameraComponent* Camera;" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_body = { "body", nullptr, (EPropertyFlags)0x002008000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAIpawn_characterDefault, body), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_body_MetaData, ARRAY_COUNT(Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_body_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_emotionQuotient_MetaData[] = {
 		{ "Category", "Emotions" },
@@ -206,6 +237,15 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_characterDefault() {}
 	};
 #endif
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_dominantEmotion = { "dominantEmotion", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAIpawn_characterDefault, dominantEmotion), METADATA_PARAMS(Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_dominantEmotion_MetaData, ARRAY_COUNT(Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_dominantEmotion_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_body_MetaData[] = {
+		{ "Category", "Components" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "AIpawn_characterDefault.h" },
+		{ "ToolTip", "UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = \"AI Sensing\")\nint sense; sense = 1 => sight; sense = 2 => hearing; sense = 0 => unknown, need to recheck\nUPROPERTY(EditAnywhere, BlueprintReadWrite, Category = \"Actor instances\")\nFString detectedActorInstance; declaring a string var which will hold the Actor Instance detected by the blueprint and passed into the AIsenseDecision func using this var" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_body = { "body", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAIpawn_characterDefault, body), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_body_MetaData, ARRAY_COUNT(Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_body_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_energyLevel_MetaData[] = {
 		{ "Category", "Needs" },
@@ -228,9 +268,9 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_characterDefault() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_foodLevel = { "foodLevel", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAIpawn_characterDefault, foodLevel), METADATA_PARAMS(Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_foodLevel_MetaData, ARRAY_COUNT(Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_foodLevel_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AAIpawn_characterDefault_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_body,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_emotionQuotient,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_dominantEmotion,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_body,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_energyLevel,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_hydrationLevel,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_foodLevel,
@@ -262,7 +302,7 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_characterDefault() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAIpawn_characterDefault, 287933183);
+	IMPLEMENT_CLASS(AAIpawn_characterDefault, 1482446916);
 	template<> NEUROSIM_API UClass* StaticClass<AAIpawn_characterDefault>()
 	{
 		return AAIpawn_characterDefault::StaticClass();

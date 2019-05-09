@@ -22,10 +22,13 @@ public:
 	float hydrationLevel = 100;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Needs")
 	float energyLevel = 100;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI Sensing")
-	int sense; //sense = 1 => sight; sense = 2 => hearing; sense = 0 => unknown, need to recheck
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor instances")
-	FString detectedActorInstance; //declaring a string var which will hold the Actor Instance detected by the blueprint and passed into the AIsenseDecision func using this var
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI Sensing")
+	//int sense; //sense = 1 => sight; sense = 2 => hearing; sense = 0 => unknown, need to recheck
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor instances")
+	//FString detectedActorInstance; //declaring a string var which will hold the Actor Instance detected by the blueprint and passed into the AIsenseDecision func using this var
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+	UStaticMeshComponent* body;
 
 
 	UFUNCTION(BlueprintCallable, Category = "Core AI logic")
@@ -49,9 +52,6 @@ protected:
 
 	//UPROPERTY(EditAnywhere, Category = "Components")
 	//UCameraComponent* Camera;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
-	UStaticMeshComponent* body;
 
 	//FString dominantEmotion[6] = { "fear", "shock", "happiness", "love", "sadness", "neutral" };
 

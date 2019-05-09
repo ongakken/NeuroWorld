@@ -20,6 +20,7 @@ AAIpawn_characterDefault::AAIpawn_characterDefault()
 	PrimaryActorTick.bCanEverTick = true;
 
 	body = CreateDefaultSubobject<UStaticMeshComponent>("Mesh"); //defining a new component (subobject) for the current actor
+	body->SetupAttachment(RootComponent);
 	/* Camera = CreateDefaultSubobject<UCameraComponent>("Camera"); //defining a primary camera that will provide an exclusive look on this actor
 	Camera->SetRelativeLocation(FVector(-500.f, 0.f, 0.f));
 	Camera->SetupAttachment(Mesh); */

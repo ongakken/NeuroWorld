@@ -40,6 +40,16 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 		P_NATIVE_BEGIN; \
 		P_THIS->locationDecision(Z_Param_colliderInstance); \
 		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execAIsenseDecision) \
+	{ \
+		P_GET_PROPERTY(UIntProperty,Z_Param_sense); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_detectedActorInstance); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->AIsenseDecision(Z_Param_sense,Z_Param_detectedActorInstance); \
+		P_NATIVE_END; \
 	}
 
 
@@ -69,6 +79,16 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->locationDecision(Z_Param_colliderInstance); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execAIsenseDecision) \
+	{ \
+		P_GET_PROPERTY(UIntProperty,Z_Param_sense); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_detectedActorInstance); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->AIsenseDecision(Z_Param_sense,Z_Param_detectedActorInstance); \
 		P_NATIVE_END; \
 	}
 
@@ -115,10 +135,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AAIpawn_characterDefault); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AAIpawn_characterDefault)
 
 
-#define NeuroSim_Source_NeuroSim_AIpawn_characterDefault_h_14_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__body() { return STRUCT_OFFSET(AAIpawn_characterDefault, body); }
-
-
+#define NeuroSim_Source_NeuroSim_AIpawn_characterDefault_h_14_PRIVATE_PROPERTY_OFFSET
 #define NeuroSim_Source_NeuroSim_AIpawn_characterDefault_h_11_PROLOG
 #define NeuroSim_Source_NeuroSim_AIpawn_characterDefault_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
