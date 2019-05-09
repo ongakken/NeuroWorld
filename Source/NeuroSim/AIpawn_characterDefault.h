@@ -16,10 +16,10 @@ class NEUROSIM_API AAIpawn_characterDefault : public ACharacter
 public:
 	// Sets default values for this character's properties
 	AAIpawn_characterDefault();
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Core AI logic")
-	string positiveLocations[];
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Core AI logic")
-	string negativeLocations[];
+	UPROPERTY(EditAnywhere, Category = "Core AI logic")
+	FString positiveLocations[99999];
+	UPROPERTY(EditAnywhere, Category = "Core AI logic")
+	FString negativeLocations[99999];
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Needs")
 	float foodLevel = 100;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Needs")

@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\NeuroSim.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{3786C1E6-45E6-4043-9020-F371807BADA9}</UniqueIdentifier>
+      <UniqueIdentifier>{7D337CF0-9F60-4A71-8BEA-E924D40C830F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\NeuroSim.Target.cs">
       <Filter>Source</Filter>
@@ -16,7 +16,7 @@
     <None Include="..\..\desktop.ini" />
     <None Include="..\..\NeuroSim.VC.db" />
     <Filter Include="Config">
-      <UniqueIdentifier>{8F9A59BC-6A43-4028-80FC-58D5B231D21A}</UniqueIdentifier>
+      <UniqueIdentifier>{2B7F5A49-29FA-47AD-9E9F-8D8E13DA47ED}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -34,7 +34,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\NeuroSim">
-      <UniqueIdentifier>{0FB9FC4C-5113-4294-B454-B8F51C4CC935}</UniqueIdentifier>
+      <UniqueIdentifier>{75467CCA-6ED1-4516-8CD7-F852F40A820C}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\NeuroSim\AIpawn_character.cpp">
       <Filter>Source\NeuroSim</Filter>

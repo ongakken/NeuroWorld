@@ -1,17 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.22310.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{25D65997-092A-4F0B-BE73-22E82E2927AE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{1692C57F-396F-471C-8F89-531E02FCFD99}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Games", "Games", "{7CE22C34-81D2-443B-BDBC-CE91FF0B616B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Games", "Games", "{A6D46C8C-A3A0-4073-8A69-65AA3AFB2CF0}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NeuroSim", "Intermediate\ProjectFiles\NeuroSim.vcxproj", "{577A8BE4-C3BF-4697-97BC-818D06354A11}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DFDCB237-ACB9-49FB-83BD-9622BE334D66} = {DFDCB237-ACB9-49FB-83BD-9622BE334D66}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UE4", "Intermediate\ProjectFiles\UE4.vcxproj", "{DFDCB237-ACB9-49FB-83BD-9622BE334D66}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Visualizers", "Visualizers", "{73D18C43-70A4-4C6F-9710-C7F0858D59C8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Visualizers", "Visualizers", "{F2F78119-F069-40D9-A4FB-A11647FFC080}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\UE_4.22\Engine\Extras\VisualStudioDebugging\UE4.natvis = ..\..\UE_4.22\Engine\Extras\VisualStudioDebugging\UE4.natvis
 	EndProjectSection
@@ -101,7 +104,10 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{DFDCB237-ACB9-49FB-83BD-9622BE334D66} = {25D65997-092A-4F0B-BE73-22E82E2927AE}
-		{577A8BE4-C3BF-4697-97BC-818D06354A11} = {7CE22C34-81D2-443B-BDBC-CE91FF0B616B}
+		{577A8BE4-C3BF-4697-97BC-818D06354A11} = {A6D46C8C-A3A0-4073-8A69-65AA3AFB2CF0}
+		{DFDCB237-ACB9-49FB-83BD-9622BE334D66} = {1692C57F-396F-471C-8F89-531E02FCFD99}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC367B7A-183C-4EF8-8E69-2AADAE111A96}
 	EndGlobalSection
 EndGlobal

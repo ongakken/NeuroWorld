@@ -1,7 +1,6 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #include "AIpawn_characterDefault.h"
 #include <iostream>
+#include <ostream>
 #include <stdio.h>
 #include <conio.h>
 #include <Engine.h>
@@ -75,7 +74,7 @@ void AAIpawn_characterDefault::AIsenseDecision(int sense, FString detectedActorI
 	else if (sense == 1)
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Sight sense has just been used")));
-		cout << detectedActorInstance;
+		cout << &detectedActorInstance;
 		if (emotionQuotient == 1)
 		{
 			auxInt_pos++;
@@ -94,7 +93,7 @@ void AAIpawn_characterDefault::AIsenseDecision(int sense, FString detectedActorI
 	else if (sense == 2)
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Hearing sense has just been used")));
-		cout << detectedActorInstance;
+		cout << &detectedActorInstance;
 		if (emotionQuotient == 1)
 		{
 			auxInt_pos++;
@@ -169,7 +168,7 @@ void AAIpawn_characterDefault::Tick(float DeltaTime)
 }
 
 // Called to bind functionality to input
-void AAIpawn_characterDefault::SetupPlayerInputComponent(UInputComponent *PlayerInputComponent)
+void AAIpawn_characterDefault::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 }

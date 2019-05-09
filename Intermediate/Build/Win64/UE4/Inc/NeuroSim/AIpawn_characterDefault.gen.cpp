@@ -185,9 +185,21 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_characterDefault() {}
 #endif
 		static const UE4CodeGen_Private::FStrPropertyParams NewProp_dominantEmotion;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_testMeshComponent_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_testMeshComponent;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_body_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_body;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_auxInt_neg_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_auxInt_neg;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_auxInt_pos_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_auxInt_pos;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_energyLevel_MetaData[];
 #endif
@@ -200,6 +212,14 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_characterDefault() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_foodLevel_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_foodLevel;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_negativeLocations_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_negativeLocations;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_positiveLocations_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_positiveLocations;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -238,6 +258,14 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_characterDefault() {}
 #endif
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_dominantEmotion = { "dominantEmotion", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAIpawn_characterDefault, dominantEmotion), METADATA_PARAMS(Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_dominantEmotion_MetaData, ARRAY_COUNT(Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_dominantEmotion_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_testMeshComponent_MetaData[] = {
+		{ "Category", "Components" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "AIpawn_characterDefault.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_testMeshComponent = { "testMeshComponent", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAIpawn_characterDefault, testMeshComponent), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_testMeshComponent_MetaData, ARRAY_COUNT(Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_testMeshComponent_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_body_MetaData[] = {
 		{ "Category", "Components" },
 		{ "EditInline", "true" },
@@ -246,6 +274,20 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_characterDefault() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_body = { "body", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAIpawn_characterDefault, body), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_body_MetaData, ARRAY_COUNT(Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_body_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_auxInt_neg_MetaData[] = {
+		{ "Category", "Aux" },
+		{ "ModuleRelativePath", "AIpawn_characterDefault.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_auxInt_neg = { "auxInt_neg", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAIpawn_characterDefault, auxInt_neg), METADATA_PARAMS(Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_auxInt_neg_MetaData, ARRAY_COUNT(Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_auxInt_neg_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_auxInt_pos_MetaData[] = {
+		{ "Category", "Aux" },
+		{ "ModuleRelativePath", "AIpawn_characterDefault.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_auxInt_pos = { "auxInt_pos", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAIpawn_characterDefault, auxInt_pos), METADATA_PARAMS(Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_auxInt_pos_MetaData, ARRAY_COUNT(Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_auxInt_pos_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_energyLevel_MetaData[] = {
 		{ "Category", "Needs" },
@@ -267,13 +309,32 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_characterDefault() {}
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_foodLevel = { "foodLevel", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAIpawn_characterDefault, foodLevel), METADATA_PARAMS(Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_foodLevel_MetaData, ARRAY_COUNT(Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_foodLevel_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_negativeLocations_MetaData[] = {
+		{ "Category", "Core AI logic" },
+		{ "ModuleRelativePath", "AIpawn_characterDefault.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_negativeLocations = { "negativeLocations", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, CPP_ARRAY_DIM(negativeLocations, AAIpawn_characterDefault), STRUCT_OFFSET(AAIpawn_characterDefault, negativeLocations), METADATA_PARAMS(Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_negativeLocations_MetaData, ARRAY_COUNT(Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_negativeLocations_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_positiveLocations_MetaData[] = {
+		{ "Category", "Core AI logic" },
+		{ "ModuleRelativePath", "AIpawn_characterDefault.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_positiveLocations = { "positiveLocations", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, CPP_ARRAY_DIM(positiveLocations, AAIpawn_characterDefault), STRUCT_OFFSET(AAIpawn_characterDefault, positiveLocations), METADATA_PARAMS(Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_positiveLocations_MetaData, ARRAY_COUNT(Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_positiveLocations_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AAIpawn_characterDefault_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_emotionQuotient,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_dominantEmotion,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_testMeshComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_body,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_auxInt_neg,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_auxInt_pos,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_energyLevel,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_hydrationLevel,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_foodLevel,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_negativeLocations,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAIpawn_characterDefault_Statics::NewProp_positiveLocations,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AAIpawn_characterDefault_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AAIpawn_characterDefault>::IsAbstract,
@@ -302,7 +363,7 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_characterDefault() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAIpawn_characterDefault, 1482446916);
+	IMPLEMENT_CLASS(AAIpawn_characterDefault, 2780794447);
 	template<> NEUROSIM_API UClass* StaticClass<AAIpawn_characterDefault>()
 	{
 		return AAIpawn_characterDefault::StaticClass();
