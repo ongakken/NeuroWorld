@@ -69,5 +69,6 @@
     <ClInclude Include="..\..\Source\NeuroSim\NeuroSim.h">
       <Filter>Source\NeuroSim</Filter>
     </ClInclude>
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>
