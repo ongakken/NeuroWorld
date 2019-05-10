@@ -35,10 +35,12 @@ public:
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor instances")
 	//FString detectedActorInstance; //declaring a string var which will hold the Actor Instance detected by the blueprint and passed into the AIsenseDecision func using this var
 
+	/*
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 	UStaticMeshComponent* body;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 	UStaticMeshComponent* testMeshComponent;
+	*/
 
 
 	UFUNCTION(BlueprintCallable, Category = "Core AI logic")
