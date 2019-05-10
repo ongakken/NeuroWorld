@@ -18,12 +18,16 @@ AAIpawn_characterDefault::AAIpawn_characterDefault()
 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	/*
 	testMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>("testMesh");
 	body = CreateDefaultSubobject<UStaticMeshComponent>("Mesh"); //defining a new component (subobject) for the current actor
 	body->SetupAttachment(RootComponent);
+	*/
+
 	/* Camera = CreateDefaultSubobject<UCameraComponent>("Camera"); //defining a primary camera that will provide an exclusive look on this actor
 	Camera->SetRelativeLocation(FVector(-500.f, 0.f, 0.f));
-	Camera->SetupAttachment(Mesh); */
+	Camera->SetupAttachment(Mesh); 
+	*/
 }
 
 void AAIpawn_characterDefault::refillNeeds(FString needsToManipulate, float amount)
@@ -80,11 +84,13 @@ void AAIpawn_characterDefault::AIsenseDecision(int sense, FString detectedActorI
 		{
 			auxInt_pos++;
 			positiveLocations[auxInt_pos] = detectedActorInstance;
+			
 		}
 		else if (emotionQuotient == -1)
 		{
 			auxInt_neg++;
 			negativeLocations[auxInt_neg] = detectedActorInstance;
+
 		}
 		else
 		{
