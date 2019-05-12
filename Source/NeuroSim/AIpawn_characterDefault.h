@@ -8,7 +8,7 @@
 #include <iostream>
 #include "AIpawn_characterDefault.generated.h"
 
-UCLASS()
+UCLASS(BlueprintType, Blueprintable, meta = (BlueprintSpawnableComponent))
 class NEUROSIM_API AAIpawn_characterDefault : public ACharacter
 {
 	GENERATED_BODY()
@@ -35,9 +35,11 @@ public:
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor instances")
 	//FString detectedActorInstance; //declaring a string var which will hold the Actor Instance detected by the blueprint and passed into the AIsenseDecision func using this var
 
-	/*
+	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 	UStaticMeshComponent* body;
+
+	/*
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 	UStaticMeshComponent* testMeshComponent;
 	*/
@@ -59,8 +61,6 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
-	FVector CurrentActorLocation;
 
 	//UPROPERTY(EditAnywhere, Category = "Components")
 	//UCameraComponent* Camera;

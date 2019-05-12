@@ -42,7 +42,7 @@
 #define PLATFORM_WINDOWS 1
 #define NDEBUG 1
 #define UE_BUILD_DEVELOPMENT 1
-#define UE_ENGINE_DIRECTORY "../../../../UE_4.22/Engine/"
+#define UE_ENGINE_DIRECTORY "C:/Program Files/Epic Games/UE_4.22/Engine/"
 #define UE_IS_ENGINE_MODULE 0
 #define UE_PROJECT_NAME NeuroSim
 #define IMPLEMENT_ENCRYPTION_KEY_REGISTRATION() 

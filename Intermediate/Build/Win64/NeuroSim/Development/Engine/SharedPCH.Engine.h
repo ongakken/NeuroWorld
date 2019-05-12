@@ -1,4 +1,4 @@
-// PCH for D:\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Public\EngineSharedPCH.h
+// PCH for C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Public\EngineSharedPCH.h
 #define IS_PROGRAM 0
 #define UE_GAME 1
 #define ENABLE_PGO_PROFILE 0
@@ -37,7 +37,7 @@
 #define PLATFORM_WINDOWS 1
 #define NDEBUG 1
 #define UE_BUILD_DEVELOPMENT 1
-#define UE_ENGINE_DIRECTORY "../../../../UE_4.22/Engine/"
+#define UE_ENGINE_DIRECTORY "C:/Program Files/Epic Games/UE_4.22/Engine/"
 #define UE_IS_ENGINE_MODULE 1
 #define INCLUDE_CHAOS 0
 #define WITH_PHYSX 1
@@ -106,4 +106,4 @@
 #define AUDIOMIXER_API 
 #define UELIBSAMPLERATE_API 
 #define ANIMATIONCORE_API 
-#include "D:\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Public\EngineSharedPCH.h"
+#include "C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Public\EngineSharedPCH.h"

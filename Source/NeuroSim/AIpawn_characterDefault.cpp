@@ -17,10 +17,9 @@ AAIpawn_characterDefault::AAIpawn_characterDefault()
 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	/*
+	
 	body = CreateDefaultSubobject<UStaticMeshComponent>("Mesh"); //defining a new component (subobject) for the current actor
-	testMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>("testMesh");
-	*/
+	
 
 	/* Camera = CreateDefaultSubobject<UCameraComponent>("Camera"); //defining a primary camera that will provide an exclusive look on this actor
 	Camera->SetRelativeLocation(FVector(-500.f, 0.f, 0.f));
@@ -169,7 +168,6 @@ void AAIpawn_characterDefault::BeginPlay()
 void AAIpawn_characterDefault::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	CurrentActorLocation = GetActorLocation();
 }
 
 // Called to bind functionality to input
