@@ -17,14 +17,12 @@ AAIpawn_characterDefault::AAIpawn_characterDefault()
 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	
-	body = CreateDefaultSubobject<UStaticMeshComponent>("Mesh"); //defining a new component (subobject) for the current actor
-	
-
-	/* Camera = CreateDefaultSubobject<UCameraComponent>("Camera"); //defining a primary camera that will provide an exclusive look on this actor
-	Camera->SetRelativeLocation(FVector(-500.f, 0.f, 0.f));
-	Camera->SetupAttachment(Mesh); 
-	*/
+	body = CreateDefaultSubobject<UStaticMeshComponent>("Mesh"); //defining a new Static Mesh Component (Subobject) for the current Actor
+	Camera = CreateDefaultSubobject<UCameraComponent>("Camera"); //defining a primary camera that will provide an exclusive look on this Actor
+	Camera->SetRelativeLocation(FVector(-500.f, 0.f, 0.f)); //setting the Camera's relative position to the Actor
+	Camera->SetupAttachment(body); //attaching the Camera to the Actor's 'body' Component
+	mouthOutput = CreateDefaultSubobject<UAudioComponent>("Mouth Output"); //defining an Audio Component capable of playing .wav audio files
+	//mouthOutput->SetSound(); //load audio cue already created in the editor
 }
 
 void AAIpawn_characterDefault::refillNeeds(FString needsToManipulate, float amount)
@@ -66,7 +64,7 @@ void AAIpawn_characterDefault::refillNeeds(FString needsToManipulate, float amou
 	}
 }
 
-void AAIpawn_characterDefault::AIsenseDecision(int sense, FString detectedActorInstance) //detecting an Actor Instance and deciding whether to react to it or not and if yes, how exactly
+void AAIpawn_characterDefault::AIsenseDecision(int sense, FSoftClassPath detectedColliderClass, FSoftObjectPath detectedColliderInstance, FSoftClassPath detectedCharacterClass, FSoftObjectPath detectedCharacterInstance) //detecting an Actor Instance and deciding whether to react to it or not and if yes, how exactly
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Actor Instance detected"))); //for debugging purposes, print a message to the screen saying that we indeed have detected an unspecified Actor Instance
 	if (sense == 0)
@@ -76,17 +74,17 @@ void AAIpawn_characterDefault::AIsenseDecision(int sense, FString detectedActorI
 	else if (sense == 1)
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Sight sense has just been used")));
-		cout << &detectedActorInstance;
+		cout << &detectedColliderClass;
 		if (emotionQuotient == 1)
 		{
 			auxInt_pos++;
-			positiveLocations[auxInt_pos] = detectedActorInstance;
+			//positiveLocations[auxInt_pos] = detectedActorInstance;
 			
 		}
 		else if (emotionQuotient == -1)
 		{
 			auxInt_neg++;
-			negativeLocations[auxInt_neg] = detectedActorInstance;
+			//negativeLocations[auxInt_neg] = detectedActorInstance;
 
 		}
 		else
@@ -97,16 +95,16 @@ void AAIpawn_characterDefault::AIsenseDecision(int sense, FString detectedActorI
 	else if (sense == 2)
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Hearing sense has just been used")));
-		cout << &detectedActorInstance;
+		cout << &detectedColliderClass;
 		if (emotionQuotient == 1)
 		{
 			auxInt_pos++;
-			positiveLocations[auxInt_pos] = detectedActorInstance;
+			//positiveLocations[auxInt_pos] = detectedActorInstance;
 		}
 		else if (emotionQuotient == -1)
 		{
 			auxInt_pos++;
-			negativeLocations[auxInt_neg] = detectedActorInstance;
+			//negativeLocations[auxInt_neg] = detectedActorInstance;
 		}
 		else
 		{

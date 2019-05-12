@@ -6,6 +6,8 @@
 #include "UObject/ObjectMacros.h"
 #include <string>
 #include <iostream>
+#include "Camera/CameraComponent.h"
+#include "Components/AudioComponent.h"
 #include "AIpawn_characterDefault.generated.h"
 
 UCLASS(BlueprintType, Blueprintable, meta = (BlueprintSpawnableComponent))
@@ -17,46 +19,40 @@ public:
 	// Sets default values for this character's properties
 	AAIpawn_characterDefault();
 	UPROPERTY(EditAnywhere, Category = "Core AI logic")
-	FString positiveLocations[999];
+		FString positiveLocations[999]; //a garbage collecting method should be implemented [forgetting things]
 	UPROPERTY(EditAnywhere, Category = "Core AI logic")
-	FString negativeLocations[999];
+		FString negativeLocations[999]; //a garbage collecting method should be implemented [forgetting things]
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Needs")
-	float foodLevel = 100;
+		float foodLevel = 100;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Needs")
-	float hydrationLevel = 100;
+		float hydrationLevel = 100;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Needs")
-	float energyLevel = 100;
+		float energyLevel = 100;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Aux")
-	int auxInt_pos = 0;
+		int auxInt_pos = 0;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Aux")
-	int auxInt_neg = 0;
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI Sensing")
-	//int sense; //sense = 1 => sight; sense = 2 => hearing; sense = 0 => unknown, need to recheck
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor instances")
-	//FString detectedActorInstance; //declaring a string var which will hold the Actor Instance detected by the blueprint and passed into the AIsenseDecision func using this var
+		int auxInt_neg = 0;
 
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
-	UStaticMeshComponent* body;
-
-	/*
+		UStaticMeshComponent* body;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
-	UStaticMeshComponent* testMeshComponent;
-	*/
-
+		UCameraComponent* Camera;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+		UAudioComponent* mouthOutput;
 
 	UFUNCTION(BlueprintCallable, Category = "Core AI logic")
-	void AIsenseDecision(int sense, FString detectedActorInstance);
+		void AIsenseDecision(int sense, FSoftClassPath detectedColliderClass, FSoftObjectPath detectedColliderInstance, FSoftClassPath detectedCharacterClass, FSoftObjectPath detectedCharacterInstance); //to be finished, gotta figure out how to reference individual class instances in the world and get their identifiers to here
 	UFUNCTION(BlueprintCallable, Category = "Core AI logic")
-	void locationDecision(FString colliderInstance); //this func will decide whether to return to a certain place and how probable that is based on the emotion(s) experienced there
+		void locationDecision(FString colliderInstance); //this func will decide whether to return to a certain place and how probable that is based on the emotion(s) experienced there
 	UFUNCTION(BlueprintCallable, Category = "'Needs' manipulation")
-	void decrementNeeds();
+		void decrementNeeds();
 	UFUNCTION(BlueprintCallable, Category = "'Needs' manipulation")
-	void refillNeeds(FString needsToManipulate, float amount); //this func will be modifying individual needs based on certain events defined in BPs
+		void refillNeeds(FString needsToManipulate, float amount); //this func will be modifying individual needs based on certain events defined in BPs
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Emotions")
-	FString dominantEmotion; //var that holds the most intensive emotion in a character instance
+		FString dominantEmotion; //var that holds the most intensive emotion in a character instance
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Emotions")
-	int emotionQuotient; //emotion categorization var (the value of this var will range from <-1; 1>, where minus are the negative emotions and plus are the positive ones; zero is a neutral)
+		int emotionQuotient; //emotion categorization var (the value of this var will range from <-1; 1>, where minus are the negative emotions and plus are the positive ones; zero is a neutral)
 
 protected:
 	// Called when the game starts or when spawned
