@@ -74,17 +74,16 @@ void AAIpawn_characterDefault::AIsenseDecision(int sense, FSoftClassPath detecte
 	else if (sense == 1)
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Sight sense has just been used")));
-		//cout << "Detected Collider Class: " << detectedColliderClass << endl;
 		if (emotionQuotient == 1)
 		{
 			auxInt_pos++;
-			//positiveLocations[auxInt_pos] = detectedActorInstance;
+			positiveLocations[auxInt_pos] = detectedColliderInstance;
 			
 		}
 		else if (emotionQuotient == -1)
 		{
 			auxInt_neg++;
-			//negativeLocations[auxInt_neg] = detectedActorInstance;
+			negativeLocations[auxInt_neg] = detectedColliderInstance;
 
 		}
 		else
@@ -99,12 +98,12 @@ void AAIpawn_characterDefault::AIsenseDecision(int sense, FSoftClassPath detecte
 		if (emotionQuotient == 1)
 		{
 			auxInt_pos++;
-			//positiveLocations[auxInt_pos] = detectedActorInstance;
+			positiveLocations[auxInt_pos] = detectedColliderInstance;
 		}
 		else if (emotionQuotient == -1)
 		{
-			auxInt_pos++;
-			//negativeLocations[auxInt_neg] = detectedActorInstance;
+			auxInt_neg++;
+			negativeLocations[auxInt_neg] = detectedColliderInstance;
 		}
 		else
 		{
@@ -116,7 +115,7 @@ void AAIpawn_characterDefault::AIsenseDecision(int sense, FSoftClassPath detecte
 	//after getting the 'sense' var, we'll read the 'detectedActorInstance' var and decide how to proceed
 }
 
-void AAIpawn_characterDefault::locationDecision(FString colliderInstance)
+void AAIpawn_characterDefault::locationDecision(FSoftClassPath detectedColliderClass) //gotta implement this input into the decision IFs down in the func body
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, FString::Printf(TEXT("locationDecision run")));
 	if (dominantEmotion == "fear")

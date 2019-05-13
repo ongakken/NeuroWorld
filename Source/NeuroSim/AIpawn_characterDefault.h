@@ -44,7 +44,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Core AI logic")
 		void AIsenseDecision(int sense, FSoftClassPath detectedColliderClass, FSoftObjectPath detectedColliderInstance, FSoftClassPath detectedCharacterClass, FSoftObjectPath detectedCharacterInstance); //to be finished, gotta figure out how to reference individual class instances in the world and get their identifiers to here
 	UFUNCTION(BlueprintCallable, Category = "Core AI logic")
-		void locationDecision(FString colliderInstance); //this func will decide whether to return to a certain place and how probable that is based on the emotion(s) experienced there
+		void locationDecision(FSoftColliderClass detectedColliderClass); //this func will decide whether to return to a certain place and how probable that is based on the emotion(s) experienced there
 	UFUNCTION(BlueprintCallable, Category = "'Needs' manipulation")
 		void decrementNeeds();
 	UFUNCTION(BlueprintCallable, Category = "'Needs' manipulation")
