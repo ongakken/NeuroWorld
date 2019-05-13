@@ -74,7 +74,7 @@ void AAIpawn_characterDefault::AIsenseDecision(int sense, FSoftClassPath detecte
 	else if (sense == 1)
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Sight sense has just been used")));
-		cout << &detectedColliderClass;
+		//cout << "Detected Collider Class: " << detectedColliderClass << endl;
 		if (emotionQuotient == 1)
 		{
 			auxInt_pos++;
