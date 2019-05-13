@@ -78,7 +78,7 @@ void AAIpawn_characterDefault::AIsenseDecision(int sense, FSoftClassPath detecte
 		if (emotionQuotient == 1)
 		{
 			auxInt_pos++;
-			//positiveLocations[auxInt_pos] = detectedActorInstance;
+			//positiveLocations[auxInt_pos] = ; //we need to check for both class and class instance of both the overlapping Collider and detected AIpawn_characterDefault Actor
 			
 		}
 		else if (emotionQuotient == -1)
