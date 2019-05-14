@@ -23,6 +23,7 @@ AAIpawn_characterDefault::AAIpawn_characterDefault()
 	Camera->SetupAttachment(body); //attaching the Camera to the Actor's 'body' Component
 	mouthOutput = CreateDefaultSubobject<UAudioComponent>("Mouth Output"); //defining an Audio Component capable of playing .wav audio files
 	//mouthOutput->SetSound(); //load audio cue already created in the editor
+
 }
 
 void AAIpawn_characterDefault::refillNeeds(FString needsToManipulate, float amount)

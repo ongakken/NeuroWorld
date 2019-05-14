@@ -40,6 +40,8 @@ public:
 		UCameraComponent* Camera;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 		UAudioComponent* mouthOutput;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+		U //started to work on some pluggable emotion control components
 
 	UFUNCTION(BlueprintCallable, Category = "Core AI logic")
 		void AIsenseDecision(int sense, FSoftClassPath detectedColliderClass, FSoftObjectPath detectedColliderInstance, FSoftClassPath detectedCharacterClass, FSoftObjectPath detectedCharacterInstance); //to be finished, gotta figure out how to reference individual class instances in the world and get their identifiers to here
