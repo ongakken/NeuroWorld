@@ -39,13 +39,11 @@ public:
 		UCameraComponent* Camera;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 		UAudioComponent* mouthOutput;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
-		U //started to work on some pluggable emotion control components
 
 	UFUNCTION(BlueprintCallable, Category = "Core AI logic")
-		void AIsenseDecision(int sense, FSoftClassPath detectedColliderClass, FSoftObjectPath detectedColliderInstance, FSoftClassPath detectedCharacterClass, FSoftObjectPath detectedCharacterInstance); //to be finished, gotta figure out how to reference individual class instances in the world and get their identifiers to here
+		void AIsenseDecision(int sense, FString detectedColliderClass, FString detectedColliderInstance, FString detectedCharacterClass, FString detectedCharacterInstance); //to be finished, gotta figure out how to reference individual class instances in the world and get their identifiers to here
 	UFUNCTION(BlueprintCallable, Category = "Core AI logic")
-		void locationDecision(FSoftColliderClass detectedColliderClass); //this func will decide whether to return to a certain place and how probable that is based on the emotion(s) experienced there
+		void locationDecision(FString detectedColliderClass); //this func will decide whether to return to a certain place and how probable that is based on the emotion(s) experienced there
 	UFUNCTION(BlueprintCallable, Category = "'Needs' manipulation")
 		void decrementNeeds();
 	UFUNCTION(BlueprintCallable, Category = "'Needs' manipulation")

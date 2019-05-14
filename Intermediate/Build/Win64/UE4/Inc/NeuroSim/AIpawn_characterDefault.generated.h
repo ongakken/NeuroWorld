@@ -8,8 +8,6 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-struct FSoftClassPath;
-struct FSoftObjectPath;
 #ifdef NEUROSIM_AIpawn_characterDefault_generated_h
 #error "AIpawn_characterDefault.generated.h already included, missing '#pragma once' in AIpawn_characterDefault.h"
 #endif
@@ -37,20 +35,20 @@ struct FSoftObjectPath;
  \
 	DECLARE_FUNCTION(execlocationDecision) \
 	{ \
-		P_GET_PROPERTY(UStrProperty,Z_Param_colliderInstance); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_detectedColliderClass); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->locationDecision(Z_Param_colliderInstance); \
+		P_THIS->locationDecision(Z_Param_detectedColliderClass); \
 		P_NATIVE_END; \
 	} \
  \
 	DECLARE_FUNCTION(execAIsenseDecision) \
 	{ \
 		P_GET_PROPERTY(UIntProperty,Z_Param_sense); \
-		P_GET_STRUCT(FSoftClassPath,Z_Param_detectedColliderClass); \
-		P_GET_STRUCT(FSoftObjectPath,Z_Param_detectedColliderInstance); \
-		P_GET_STRUCT(FSoftClassPath,Z_Param_detectedCharacterClass); \
-		P_GET_STRUCT(FSoftObjectPath,Z_Param_detectedCharacterInstance); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_detectedColliderClass); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_detectedColliderInstance); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_detectedCharacterClass); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_detectedCharacterInstance); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->AIsenseDecision(Z_Param_sense,Z_Param_detectedColliderClass,Z_Param_detectedColliderInstance,Z_Param_detectedCharacterClass,Z_Param_detectedCharacterInstance); \
@@ -80,20 +78,20 @@ struct FSoftObjectPath;
  \
 	DECLARE_FUNCTION(execlocationDecision) \
 	{ \
-		P_GET_PROPERTY(UStrProperty,Z_Param_colliderInstance); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_detectedColliderClass); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->locationDecision(Z_Param_colliderInstance); \
+		P_THIS->locationDecision(Z_Param_detectedColliderClass); \
 		P_NATIVE_END; \
 	} \
  \
 	DECLARE_FUNCTION(execAIsenseDecision) \
 	{ \
 		P_GET_PROPERTY(UIntProperty,Z_Param_sense); \
-		P_GET_STRUCT(FSoftClassPath,Z_Param_detectedColliderClass); \
-		P_GET_STRUCT(FSoftObjectPath,Z_Param_detectedColliderInstance); \
-		P_GET_STRUCT(FSoftClassPath,Z_Param_detectedCharacterClass); \
-		P_GET_STRUCT(FSoftObjectPath,Z_Param_detectedCharacterInstance); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_detectedColliderClass); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_detectedColliderInstance); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_detectedCharacterClass); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_detectedCharacterInstance); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->AIsenseDecision(Z_Param_sense,Z_Param_detectedColliderClass,Z_Param_detectedColliderInstance,Z_Param_detectedCharacterClass,Z_Param_detectedCharacterInstance); \

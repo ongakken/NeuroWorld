@@ -71,4 +71,28 @@
       <Filter>Source\NeuroSim</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source\NeuroSim\Public">
+      <UniqueIdentifier>{0578076a-2a8f-4cfa-b9a9-8e9627900a85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\NeuroSim\Private">
+      <UniqueIdentifier>{6a0878c1-3cd1-4fd7-9c58-9897a705b00b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\NeuroSim\Public\primitiveEmotions.h">
+      <Filter>Source\NeuroSim\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\NeuroSim\Public\higherEmotions.h">
+      <Filter>Source\NeuroSim\Public</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\NeuroSim\Private\primitiveEmotions.cpp">
+      <Filter>Source\NeuroSim\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NeuroSim\Private\higherEmotions.cpp">
+      <Filter>Source\NeuroSim\Private</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
