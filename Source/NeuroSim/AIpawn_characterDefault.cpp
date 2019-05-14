@@ -123,7 +123,7 @@ void AAIpawn_characterDefault::locationDecision(FSoftClassPath detectedColliderC
 	{
 		emotionQuotient = '-1';
 	}
-	else if (dominantEmotion == "shock" && detectedColliderClass == "")
+	else if (dominantEmotion == "shock" && detectedColliderClass == "BP_negativeLocation")
 	{
 		emotionQuotient = '-1';
 	}
