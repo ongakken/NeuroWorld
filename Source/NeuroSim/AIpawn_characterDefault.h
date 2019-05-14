@@ -32,7 +32,6 @@ public:
 		int auxInt_pos = 0;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Aux")
 		int auxInt_neg = 0;
-
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 		UStaticMeshComponent* body;
@@ -59,11 +58,6 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
-	//UPROPERTY(EditAnywhere, Category = "Components")
-	//UCameraComponent* Camera;
-
-	//FString dominantEmotion[6] = { "fear", "shock", "happiness", "love", "sadness", "neutral" };
 
 public:	
 	// Called every frame
