@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\NeuroSim.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{522EA1B2-2092-4481-87D0-457FB4A3DCCE}</UniqueIdentifier>
+      <UniqueIdentifier>{C43DB123-0BA3-43FD-BB6D-7F17E633773D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\NeuroSim.Target.cs">
       <Filter>Source</Filter>
@@ -17,7 +17,7 @@
     <None Include="..\..\desktop.ini" />
     <None Include="..\..\NeuroSim.VC.db" />
     <Filter Include="Config">
-      <UniqueIdentifier>{47F1205F-A85D-47F8-889F-05D23ADF58BE}</UniqueIdentifier>
+      <UniqueIdentifier>{900824DD-A918-4AA8-A17A-2998840B8556}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -35,7 +35,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\NeuroSim">
-      <UniqueIdentifier>{031BFCCB-3DB3-443C-8DF7-0DC80F5423C4}</UniqueIdentifier>
+      <UniqueIdentifier>{11B382DF-2CC2-4A5A-BB34-50767C6E3607}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\NeuroSim\AIpawn_character.cpp">
       <Filter>Source\NeuroSim</Filter>
@@ -70,29 +70,23 @@
     <ClInclude Include="..\..\Source\NeuroSim\NeuroSim.h">
       <Filter>Source\NeuroSim</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Filter Include="Source\NeuroSim\Public">
-      <UniqueIdentifier>{0578076a-2a8f-4cfa-b9a9-8e9627900a85}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source\NeuroSim\Private">
-      <UniqueIdentifier>{6a0878c1-3cd1-4fd7-9c58-9897a705b00b}</UniqueIdentifier>
+      <UniqueIdentifier>{18964957-55B9-4166-B6CF-4D4ED715758A}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\NeuroSim\Public\primitiveEmotions.h">
-      <Filter>Source\NeuroSim\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\NeuroSim\Public\higherEmotions.h">
-      <Filter>Source\NeuroSim\Public</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Source\NeuroSim\Private\primitiveEmotions.cpp">
-      <Filter>Source\NeuroSim\Private</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\NeuroSim\Private\higherEmotions.cpp">
       <Filter>Source\NeuroSim\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\NeuroSim\Private\primitiveEmotions.cpp">
+      <Filter>Source\NeuroSim\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\NeuroSim\Public">
+      <UniqueIdentifier>{9B4FDB50-0CA3-48D4-AB60-05121D2CDFAC}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\NeuroSim\Public\higherEmotions.h">
+      <Filter>Source\NeuroSim\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\NeuroSim\Public\primitiveEmotions.h">
+      <Filter>Source\NeuroSim\Public</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

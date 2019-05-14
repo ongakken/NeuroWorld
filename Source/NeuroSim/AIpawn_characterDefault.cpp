@@ -119,32 +119,31 @@ void AAIpawn_characterDefault::AIsenseDecision(int sense, FString detectedCollid
 void AAIpawn_characterDefault::locationDecision(FString detectedColliderClass)
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, FString::Printf(TEXT("locationDecision run")));
-	/*
-	if (dominantEmotion == "fear" && detectedColliderClass == "") //to add the appropriate emotion collider class
+	
+	if (dominantEmotion == "fear" && detectedColliderClass == "BP_negativeLocations")
 	{
 		emotionQuotient = '-1';
 	}
-	else if (dominantEmotion == "shock" && detectedColliderClass == "BP_negativeLocation")
+	else if (dominantEmotion == "shock" && detectedColliderClass == "BP_negativeLocations")
 	{
 		emotionQuotient = '-1';
 	}
-	else if (dominantEmotion == "love" && detectedColliderClass == "")
+	else if (dominantEmotion == "love" && detectedColliderClass == "BP_positiveLocations")
 	{
 		emotionQuotient = '1';
 	}
-	else if (dominantEmotion == "happiness" && detectedColliderClass == "")
+	else if (dominantEmotion == "happiness" && detectedColliderClass == "BP_positiveLocations")
 	{
 		emotionQuotient = '1';
 	}
-	else if (dominantEmotion == "sadness" && detectedColliderClass == "")
+	else if (dominantEmotion == "sadness" && detectedColliderClass == "BP_negativeLocations")
 	{
 		emotionQuotient = '-1';
 	}
-	else if (dominantEmotion == "neutral" && detectedColliderClass == "")
+	else if (dominantEmotion == "neutral" || detectedColliderClass == "unknown")
 	{
 		emotionQuotient = '0';
 	}
-	*/
 	//calculate the probability of returning (or not returning) to the location being decided
 	//insert the probability value into the behavior tree service used to navigate through the navmesh(navmeshes)
 }
