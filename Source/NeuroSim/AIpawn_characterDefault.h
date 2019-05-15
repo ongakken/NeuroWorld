@@ -19,9 +19,9 @@ public:
 	// Sets default values for this character's properties
 	AAIpawn_characterDefault();
 	UPROPERTY(EditAnywhere, Category = "Core AI logic")
-		FString positiveLocations[999]; //a garbage collecting method should be implemented [forgetting things]
+		FString positiveLocations[99]; //a garbage collecting method should be implemented [forgetting things]
 	UPROPERTY(EditAnywhere, Category = "Core AI logic")
-		FString negativeLocations[999]; //a garbage collecting method should be implemented [forgetting things]
+		FString negativeLocations[99]; //a garbage collecting method should be implemented [forgetting things]
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Needs")
 		float foodLevel = 100;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Needs")
@@ -41,13 +41,14 @@ public:
 		UAudioComponent* mouthOutput;
 
 	UFUNCTION(BlueprintCallable, Category = "Core AI logic")
-		void AIsenseDecision(int sense, FString detectedColliderClass, FString detectedColliderInstance, FString detectedCharacterClass, FString detectedCharacterInstance); //to be finished, gotta figure out how to reference individual class instances in the world and get their identifiers to here
+		void AIsenseDecision(int sense, FString detectedColliderInstance, FString detectedCharacterClass, FString detectedCharacterInstance); //to be finished, gotta figure out how to reference individual class instances in the world and get their identifiers to here
 	UFUNCTION(BlueprintCallable, Category = "Core AI logic")
 		void locationDecision(FString detectedColliderClass); //this func will decide whether to return to a certain place and how probable that is based on the emotion(s) experienced there
 	UFUNCTION(BlueprintCallable, Category = "'Needs' manipulation")
 		void decrementNeeds();
 	UFUNCTION(BlueprintCallable, Category = "'Needs' manipulation")
 		void refillNeeds(FString needsToManipulate, float amount); //this func will be modifying individual needs based on certain events defined in BPs
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Emotions")
 		FString dominantEmotion; //var that holds the most intensive emotion in a character instance
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Emotions")

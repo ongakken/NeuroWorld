@@ -65,7 +65,7 @@ void AAIpawn_characterDefault::refillNeeds(FString needsToManipulate, float amou
 	}
 }
 
-void AAIpawn_characterDefault::AIsenseDecision(int sense, FString detectedColliderClass, FString detectedColliderInstance, FString detectedCharacterClass, FString detectedCharacterInstance) //detecting an Actor Instance and deciding whether to react to it or not and if yes, how exactly
+void AAIpawn_characterDefault::AIsenseDecision(int sense, FString detectedColliderInstance, FString detectedCharacterClass, FString detectedCharacterInstance) //detecting an Actor Instance and deciding whether to react to it or not and if yes, how exactly
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Actor Instance detected"))); //for debugging purposes, print a message to the screen saying that we indeed have detected an unspecified Actor Instance
 	if (sense == 0)
@@ -113,7 +113,7 @@ void AAIpawn_characterDefault::AIsenseDecision(int sense, FString detectedCollid
 	}
 
 	//'sense' int - if we get a 0, the sense info is n/a; if we get a 1, the sense is sight and if we get a 2 the sense is hearing
-	//after getting the 'sense' var, we'll read the 'detectedActorInstance' var and decide how to proceed
+	//after getting the 'sense' var, we'll read the 'detectedActorInstance' var to decide how to proceed
 }
 
 void AAIpawn_characterDefault::locationDecision(FString detectedColliderClass)
