@@ -40,6 +40,18 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 		P_NATIVE_BEGIN; \
 		P_THIS->locationDecision(Z_Param_detectedColliderClass); \
 		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execAIsenseDecision) \
+	{ \
+		P_GET_PROPERTY(UIntProperty,Z_Param_sense); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_detectedColliderInstance); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_detectedCharacterClass); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_detectedCharacterInstance); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->AIsenseDecision(Z_Param_sense,Z_Param_detectedColliderInstance,Z_Param_detectedCharacterClass,Z_Param_detectedCharacterInstance); \
+		P_NATIVE_END; \
 	}
 
 
@@ -69,6 +81,18 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->locationDecision(Z_Param_detectedColliderClass); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execAIsenseDecision) \
+	{ \
+		P_GET_PROPERTY(UIntProperty,Z_Param_sense); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_detectedColliderInstance); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_detectedCharacterClass); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_detectedCharacterInstance); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->AIsenseDecision(Z_Param_sense,Z_Param_detectedColliderInstance,Z_Param_detectedCharacterClass,Z_Param_detectedCharacterInstance); \
 		P_NATIVE_END; \
 	}
 
