@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\NeuroSim.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{C43DB123-0BA3-43FD-BB6D-7F17E633773D}</UniqueIdentifier>
+      <UniqueIdentifier>{FD58064C-2DC3-436E-B105-7B852B54FFFC}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\NeuroSim.Target.cs">
       <Filter>Source</Filter>
@@ -17,7 +17,7 @@
     <None Include="..\..\desktop.ini" />
     <None Include="..\..\NeuroSim.VC.db" />
     <Filter Include="Config">
-      <UniqueIdentifier>{900824DD-A918-4AA8-A17A-2998840B8556}</UniqueIdentifier>
+      <UniqueIdentifier>{EEBBC570-A352-44DE-B370-F8D39D9740A4}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -35,7 +35,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\NeuroSim">
-      <UniqueIdentifier>{11B382DF-2CC2-4A5A-BB34-50767C6E3607}</UniqueIdentifier>
+      <UniqueIdentifier>{A79EA83B-985D-490A-BECC-9B3DDFCB7CD8}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\NeuroSim\AIpawn_character.cpp">
       <Filter>Source\NeuroSim</Filter>
@@ -71,7 +71,7 @@
       <Filter>Source\NeuroSim</Filter>
     </ClInclude>
     <Filter Include="Source\NeuroSim\Private">
-      <UniqueIdentifier>{18964957-55B9-4166-B6CF-4D4ED715758A}</UniqueIdentifier>
+      <UniqueIdentifier>{75489280-C817-410B-B978-98CA8C5E63CD}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\NeuroSim\Private\higherEmotions.cpp">
       <Filter>Source\NeuroSim\Private</Filter>
@@ -80,7 +80,7 @@
       <Filter>Source\NeuroSim\Private</Filter>
     </ClCompile>
     <Filter Include="Source\NeuroSim\Public">
-      <UniqueIdentifier>{9B4FDB50-0CA3-48D4-AB60-05121D2CDFAC}</UniqueIdentifier>
+      <UniqueIdentifier>{3A8C4D5C-156A-45B3-A4D3-4674722E02AD}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\NeuroSim\Public\higherEmotions.h">
       <Filter>Source\NeuroSim\Public</Filter>

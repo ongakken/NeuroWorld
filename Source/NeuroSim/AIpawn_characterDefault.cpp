@@ -8,6 +8,7 @@
 #include "Classes/Components/BoxComponent.h"
 #include "Classes/Camera/CameraComponent.h"
 #include "Camera/CameraComponent.h"
+#include "primitiveEmotions.h"
 
 using namespace std;
 
