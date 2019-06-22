@@ -26,6 +26,7 @@
 /wd4838
 /we4668
 /I .
+/I "D:\Epic Games\Neural\NeuroSim\Source\NeuroSim\Private"
 /I ..\Intermediate\Build\Win64\UE4\Inc\Engine
 /I Runtime
 /I Runtime\Engine\Classes
@@ -236,6 +237,7 @@
 /I Runtime\NavigationSystem\Public\NavMesh
 /I "D:\Epic Games\Neural\NeuroSim\Intermediate\Build\Win64\UE4\Inc\NeuroSim"
 /I "D:\Epic Games\Neural\NeuroSim\Source"
+/I "D:\Epic Games\Neural\NeuroSim\Source\NeuroSim\Public"
 /I "D:\Epic Games\Neural\NeuroSim\Source\NeuroSim"
 /I "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.16.27023\INCLUDE"
 /I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"

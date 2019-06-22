@@ -18,8 +18,6 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_characterDefault() {}
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	UPackage* Z_Construct_UPackage__Script_NeuroSim();
 	NEUROSIM_API UFunction* Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FSoftObjectPath();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FSoftClassPath();
 	NEUROSIM_API UFunction* Z_Construct_UFunction_AAIpawn_characterDefault_decrementNeeds();
 	NEUROSIM_API UFunction* Z_Construct_UFunction_AAIpawn_characterDefault_locationDecision();
 	NEUROSIM_API UFunction* Z_Construct_UFunction_AAIpawn_characterDefault_refillNeeds();
@@ -43,15 +41,13 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_characterDefault() {}
 		struct AIpawn_characterDefault_eventAIsenseDecision_Parms
 		{
 			int32 sense;
-			FSoftClassPath detectedColliderClass;
-			FSoftObjectPath detectedColliderInstance;
-			FSoftClassPath detectedCharacterClass;
-			FSoftObjectPath detectedCharacterInstance;
+			FString detectedColliderInstance;
+			FString detectedCharacterClass;
+			FString detectedCharacterInstance;
 		};
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_detectedCharacterInstance;
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_detectedCharacterClass;
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_detectedColliderInstance;
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_detectedColliderClass;
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_detectedCharacterInstance;
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_detectedCharacterClass;
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_detectedColliderInstance;
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_sense;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
@@ -59,16 +55,14 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_characterDefault() {}
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::NewProp_detectedCharacterInstance = { "detectedCharacterInstance", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AIpawn_characterDefault_eventAIsenseDecision_Parms, detectedCharacterInstance), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::NewProp_detectedCharacterClass = { "detectedCharacterClass", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AIpawn_characterDefault_eventAIsenseDecision_Parms, detectedCharacterClass), Z_Construct_UScriptStruct_FSoftClassPath, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::NewProp_detectedColliderInstance = { "detectedColliderInstance", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AIpawn_characterDefault_eventAIsenseDecision_Parms, detectedColliderInstance), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::NewProp_detectedColliderClass = { "detectedColliderClass", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AIpawn_characterDefault_eventAIsenseDecision_Parms, detectedColliderClass), Z_Construct_UScriptStruct_FSoftClassPath, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::NewProp_detectedCharacterInstance = { "detectedCharacterInstance", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AIpawn_characterDefault_eventAIsenseDecision_Parms, detectedCharacterInstance), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::NewProp_detectedCharacterClass = { "detectedCharacterClass", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AIpawn_characterDefault_eventAIsenseDecision_Parms, detectedCharacterClass), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::NewProp_detectedColliderInstance = { "detectedColliderInstance", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AIpawn_characterDefault_eventAIsenseDecision_Parms, detectedColliderInstance), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::NewProp_sense = { "sense", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AIpawn_characterDefault_eventAIsenseDecision_Parms, sense), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::NewProp_detectedCharacterInstance,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::NewProp_detectedCharacterClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::NewProp_detectedColliderInstance,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::NewProp_detectedColliderClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::NewProp_sense,
 	};
 #if WITH_METADATA
@@ -77,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_characterDefault() {}
 		{ "ModuleRelativePath", "AIpawn_characterDefault.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AAIpawn_characterDefault, nullptr, "AIsenseDecision", sizeof(AIpawn_characterDefault_eventAIsenseDecision_Parms), Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04820401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AAIpawn_characterDefault, nullptr, "AIsenseDecision", sizeof(AIpawn_characterDefault_eventAIsenseDecision_Parms), Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -115,18 +109,18 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_characterDefault() {}
 	{
 		struct AIpawn_characterDefault_eventlocationDecision_Parms
 		{
-			FString colliderInstance;
+			FString detectedColliderClass;
 		};
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_colliderInstance;
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_detectedColliderClass;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_AAIpawn_characterDefault_locationDecision_Statics::NewProp_colliderInstance = { "colliderInstance", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AIpawn_characterDefault_eventlocationDecision_Parms, colliderInstance), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_AAIpawn_characterDefault_locationDecision_Statics::NewProp_detectedColliderClass = { "detectedColliderClass", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AIpawn_characterDefault_eventlocationDecision_Parms, detectedColliderClass), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AAIpawn_characterDefault_locationDecision_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AAIpawn_characterDefault_locationDecision_Statics::NewProp_colliderInstance,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AAIpawn_characterDefault_locationDecision_Statics::NewProp_detectedColliderClass,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AAIpawn_characterDefault_locationDecision_Statics::Function_MetaDataParams[] = {
@@ -250,9 +244,9 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_characterDefault() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_NeuroSim,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AAIpawn_characterDefault_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision, "AIsenseDecision" }, // 2269371821
+		{ &Z_Construct_UFunction_AAIpawn_characterDefault_AIsenseDecision, "AIsenseDecision" }, // 2102010010
 		{ &Z_Construct_UFunction_AAIpawn_characterDefault_decrementNeeds, "decrementNeeds" }, // 1252941774
-		{ &Z_Construct_UFunction_AAIpawn_characterDefault_locationDecision, "locationDecision" }, // 531908616
+		{ &Z_Construct_UFunction_AAIpawn_characterDefault_locationDecision, "locationDecision" }, // 949431680
 		{ &Z_Construct_UFunction_AAIpawn_characterDefault_refillNeeds, "refillNeeds" }, // 224846587
 	};
 #if WITH_METADATA
@@ -397,7 +391,7 @@ void EmptyLinkFunctionForGeneratedCodeAIpawn_characterDefault() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAIpawn_characterDefault, 2968512345);
+	IMPLEMENT_CLASS(AAIpawn_characterDefault, 3099709670);
 	template<> NEUROSIM_API UClass* StaticClass<AAIpawn_characterDefault>()
 	{
 		return AAIpawn_characterDefault::StaticClass();
