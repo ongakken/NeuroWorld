@@ -98,7 +98,7 @@ void AAIpawn_characterDefault::AIsenseDecision(int sense, FString detectedCollid
 	else if (sense == 2)
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Hearing sense has just been used")));
-		cout << &detectedColliderClass;
+		//cout << &detectedColliderClass;
 		if (emotionQuotient == 1)
 		{
 			auxInt_pos++;

@@ -19,6 +19,15 @@
 			"Name": "SaveExtension",
 			"Enabled": true,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/91084f43b68047ac8da6fc88a7467936"
+		},
+		{
+			"Name": "SteamVRInput",
+			"Enabled": false,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/401605a650e64a8fa3c0f45838a6357d"
+		},
+		{
+			"Name": "FMODStudio",
+			"Enabled": false
 		}
 	]
 }
