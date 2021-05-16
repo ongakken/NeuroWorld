@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\NeuroSim.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{FD58064C-2DC3-436E-B105-7B852B54FFFC}</UniqueIdentifier>
+      <UniqueIdentifier>{15EC76C3-5020-4EA6-92E1-38A8C4A20730}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\NeuroSim.Target.cs">
       <Filter>Source</Filter>
@@ -13,11 +13,9 @@
     </None>
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
-    <None Include="..\..\.whitesource" />
-    <None Include="..\..\desktop.ini" />
     <None Include="..\..\NeuroSim.VC.db" />
     <Filter Include="Config">
-      <UniqueIdentifier>{EEBBC570-A352-44DE-B370-F8D39D9740A4}</UniqueIdentifier>
+      <UniqueIdentifier>{08227CA7-EB4C-4655-9CB5-D7D6726E500D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -35,7 +33,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\NeuroSim">
-      <UniqueIdentifier>{A79EA83B-985D-490A-BECC-9B3DDFCB7CD8}</UniqueIdentifier>
+      <UniqueIdentifier>{860AC272-6D54-44CA-A9A8-C33E44D836B3}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\NeuroSim\AIpawn_character.cpp">
       <Filter>Source\NeuroSim</Filter>
@@ -71,7 +69,7 @@
       <Filter>Source\NeuroSim</Filter>
     </ClInclude>
     <Filter Include="Source\NeuroSim\Private">
-      <UniqueIdentifier>{75489280-C817-410B-B978-98CA8C5E63CD}</UniqueIdentifier>
+      <UniqueIdentifier>{B7705124-BE50-4AF8-9310-5BCB739C6BAE}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\NeuroSim\Private\higherEmotions.cpp">
       <Filter>Source\NeuroSim\Private</Filter>
@@ -80,7 +78,7 @@
       <Filter>Source\NeuroSim\Private</Filter>
     </ClCompile>
     <Filter Include="Source\NeuroSim\Public">
-      <UniqueIdentifier>{3A8C4D5C-156A-45B3-A4D3-4674722E02AD}</UniqueIdentifier>
+      <UniqueIdentifier>{B59AAFB3-F057-42C1-96A3-857714F51253}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\NeuroSim\Public\higherEmotions.h">
       <Filter>Source\NeuroSim\Public</Filter>
@@ -88,5 +86,15 @@
     <ClInclude Include="..\..\Source\NeuroSim\Public\primitiveEmotions.h">
       <Filter>Source\NeuroSim\Public</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\NeuroSim\Public\TheChild.h">
+      <Filter>Source\NeuroSim\Public</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\NeuroSim\Private\TheChild.cpp">
+      <Filter>Source\NeuroSim\Private</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
